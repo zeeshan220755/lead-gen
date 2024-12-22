@@ -82,30 +82,16 @@
             font-size: 14px;
         }
     </style>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16775907651"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'AW-16775907651');
-    </script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-16775907651">
+</script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
-    <!-- Google Ads conversion tracking function -->
-    <script>
-        function gtag_report_conversion(url) {
-            var callback = function () {
-                if (typeof(url) != 'undefined') {
-                    window.location = url;
-                }
-            };
-            gtag('event', 'conversion', {
-                'send_to': 'AW-16775907651/LrQxCO23iOsZEMOSsL8-',
-                'event_callback': callback
-            });
-            return false;
-        }
-    </script>
+  gtag('config', 'AW-16775907651');
+</script>
 </head>
 <body>
     <div>
@@ -126,17 +112,6 @@
             <p id="responseMessage"></p>
         </div>
     </div>
-
-    <script>
-        // Handle form submission to trigger conversion event
-        document.getElementById('leadForm').addEventListener('submit', function(event) {
-            event.preventDefault();  // Prevent the default form submission
-            // Trigger the conversion tracking
-            gtag_report_conversion();
-            // Optionally, you can redirect the user or show a success message
-            document.getElementById('responseMessage').textContent = 'Thank you for your submission!';
-        });
-    </script>
-
+    <script src="script.js"></script>
 </body>
 </html>
