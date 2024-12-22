@@ -92,6 +92,23 @@
 
   gtag('config', 'AW-16775907651');
 </script>
+    
+    <!-- Google Ads conversion tracking function -->
+    <script>
+        function gtag_report_conversion(url) {
+            var callback = function () {
+                if (typeof(url) != 'undefined') {
+                    window.location = url;
+                }
+            };
+            gtag('event', 'conversion', {
+                'send_to': 'AW-16775907651/LrQxCO23iOsZEMOSsL8-',
+                'event_callback': callback
+            });
+            return false;
+        }
+    </script>
+
 </head>
 <body>
     <div>
@@ -112,6 +129,12 @@
             <p id="responseMessage"></p>
         </div>
     </div>
+    <script>
+        document.getElementById('leadForm').addEventListener('submit', function(event) {
+            event.preventDefault(); 
+            gtag_report_conversion();
+        });
+    </script>
     <script src="script.js"></script>
 </body>
 </html>
